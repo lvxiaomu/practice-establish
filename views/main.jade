@@ -1,0 +1,21 @@
+//
+   Created by famer.me on 15-11-17.
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name="renderer" content="webkit")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    link(rel="icon" type="image/x-icon" href="/favicon.ico")
+    title Eastsoft IoT
+    if env == 'production'
+      script(type="application/javascript" src=cdn + '/app/' + hash + '/bundle.js' async defer)
+    else
+      script(type="application/javascript" src='/app/bundle.js' async defer)
+
+    script
+      include ./baidu-analytics.js
+  body
+    div#root
+
