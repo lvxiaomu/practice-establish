@@ -62,14 +62,6 @@ gulp.task('default', function () {
 
 gulp.task('oss', function(){
   const hash = require('./public/app/stats.json').hash
-  const options = {
-    accessKeyId: '7PcnhTa8IX4k6SHU',
-    secretAccessKey: 'H3axsKLMR29vlDpUo3W8pJPnkdvIPV',
-    endpoint: 'http://oss-cn-shanghai.aliyuncs.com',
-    apiVersion: '2013-10-15',
-    prefix: `app/${hash}`,
-    bucket: 'eastsoft-iot'
-  }
   return gulp.src([`./public/app/${hash}/**/*`]).pipe(oss(options))
 })
 
